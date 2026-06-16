@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+#
+# CodeRabbit config for the evaluation repo. Mirrors the settings proposed for
+# dt-apps (assertive profile), minus the dt-apps-specific path instructions so
+# the review reflects CodeRabbit's own judgement rather than leading hints.
+language: en-US
+early_access: false
+
+reviews:
+  profile: assertive
+  request_changes_workflow: false
+  high_level_summary: true
+  poem: false
+  review_status: true
+  auto_review:
+    enabled: true
+    drafts: false
+    base_branches:
+      - main
+  path_filters:
+    - "!**/dist/**"
+    - "!**/build/**"
+    - "!**/*.lock"
+  tools:
+    eslint:
+      enabled: true
+
+chat:
+  auto_reply: true
